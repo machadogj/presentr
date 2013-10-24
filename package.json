@@ -1,0 +1,13 @@
+{
+  "name": "presentr",
+  "version": "0.0.1",
+  "description": "Control your Presentation from your Phone.",
+  "main": "index.js",
+  "repository": "https://github.com/machadogj/presentr",
+  "author": "Gustavo Machado",
+  "license": "MIT",
+  "dependencies": {
+    "applescript": "~0.2.1",
+    "express": "~3.4.3"
+  }
+}

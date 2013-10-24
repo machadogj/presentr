@@ -1,6 +1,6 @@
 Use the browser on your mobile device to send commands to your LibreOffice presentation in OSX.
 
-<img src="http://cdn.machadogj.com/uploads/presentr.png"></img>
+<img width="250" src="http://cdn.machadogj.com/uploads/presentr.png"></img>
 
 # Summary
 

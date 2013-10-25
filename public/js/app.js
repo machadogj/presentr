@@ -27,6 +27,7 @@ $( document ).delegate( "#home", "pageinit", function() {
             if (!mins) {
                 clearInterval(clear);
                 $("#remaining").html('Finished!');
+                return;
             }
             mins--;
             remaining(mins);

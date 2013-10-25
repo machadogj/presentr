@@ -15,17 +15,21 @@ $( document ).delegate( "#home", "pageinit", function() {
     
     $("#pause").hide();
 
+    function remaining(mins) {
+        $("#remaining").html('<span style="font-size:36px">' + mins + "</span> mins remaining");
+    }
+    
     $("#start").click(function () {
         var mins = ~~($("#time").val());
         if (!mins) return alert('Invalid time');
-        $("#remaining").html(mins + " mins remaining");
+        remaining(mins);
         clear = setInterval(function () {
             if (!mins) {
                 clearInterval(clear);
                 $("#remaining").html('Finished!');
             }
             mins--;
-            $("#remaining").html(mins + " mins remaining");
+            remaining(mins);
         }, 1000 * 60);
         $("#start").hide();
         $("#pause").show();

@@ -15,25 +15,24 @@ Use the browser on your mobile device to send commands to your LibreOffice prese
 
 # Installation
 
-Clone this repository
+You can install presentr with npm (node.js package manager)
 
-	git clone https://github.com/machadogj/presentr
+	npm install presentr -g
 
-Install dependencies with npm
-
-	cd presentr
-	npm install
+*Note:* Make sure to put the `-g` when running the previous command.
 
 Run the web server
 
-	node server.js
+	presentr -p 8989
+
+If no port is specified, it will default to `9999`.
 
 # Usage
 
 - Open your presentation in LibreOffice, and start it (F5).
 - Start the server (see Installation)
-- Browse your computer's IP and server's port (9999) from your phone (or iPod). ie:	
-	http://192.168.0.12:999
+- Browse your computer's IP and server's port (default's 9999) from your phone (or iPod). ie:	
+	http://192.168.0.12:9999
 - Make sure to disable "Lock Screen" in your phone.
 - Give kick-ass presentation
 

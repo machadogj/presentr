@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+//dependencies
+var path = require("path"),
+    fs   = require("fs"),
+    program = require("commander");
+
+//variables
+var here       = path.dirname(fs.realpathSync(__filename)),
+    pkg        = require(path.join(here, "../package.json")),
+    lib        = path.join(here, "../server"),
+    server     = require(lib);
+
+program
+    .version(pkg.version)
+    .option("-p, --port <port>", "Web server port", 9999)
+    .description("Control your presentation from your phone.")
+    .parse(process.argv);
+
+var opts = {
+    port: program.port,
+    //for the time being, there's only a web interface
+    web: true
+};
+
+console.log("");
+console.log(" Starting Presentr Server");
+console.log("");
+console.log(" Port: ", opts.port);
+console.log(" Web Enabled: ", opts.web);
+console.log("");
+
+//start the server
+server(opts, function (err) {
+    if (err) {
+        console.error(" An error occurred trying to start the server");
+        console.error(" Please make sure the port is not in use.");
+        process.exit(1);
+    }
+    console.log(" Server Started");
+});

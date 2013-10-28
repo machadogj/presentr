@@ -1,6 +1,6 @@
 {
   "name": "presentr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Control your Presentation from your Phone.",
   "main": "index.js",
   "repository": "https://github.com/machadogj/presentr",
@@ -8,6 +8,10 @@
   "license": "MIT",
   "dependencies": {
     "applescript": "~0.2.1",
-    "express": "~3.4.3"
+    "express": "~3.4.3",
+    "commander": "~2.0.0"
+  },
+  "bin": {
+    "presentr": "./bin/presentr"
   }
 }
